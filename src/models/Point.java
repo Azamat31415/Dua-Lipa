@@ -2,8 +2,8 @@ package models;
 
 public class Point {
     //Enter two coordinates
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
 
     //Constructor to initialize a point with given x and y coordinates
     public Point(double x, double y) {
@@ -12,7 +12,7 @@ public class Point {
     }
 
     //Calculate and return the distance from the current point to the destination point
-    public double distance(Point dest) {
+    public double distanceTo(Point dest) {
         double dx = this.x - dest.x;
         double dy = this.y - dest.y;
         return Math.sqrt(dx * dx + dy * dy);
